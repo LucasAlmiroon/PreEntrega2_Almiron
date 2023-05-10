@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    border-bottom: 2px #fd8769 solid;
+    background-color: lightyellow;
+}
+header a {
+    margin-left: 1rem;
+}
+header,
+section,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fd8769;
+    padding-right: 1rem;
+}
+
+input,
+select{
+    border-radius: 0.3rem;
+    border-color: #fd8769;
+}
+
+nav,
+h1,
+h2,
+h3,
+a,
+p,
+label,
+span,
+select {
+    font-family: 'Sriracha', cursive;
+}
+
+ul {
+    list-style: none;
+}
+
+.botonera {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    padding: 2rem;
+}
+.activa {
+    text-decoration:underline #fd8769 0.2rem;
+}
+.botonRegistro{
+    align-self: flex-end;
+}
+.botonNav :hover {
+    border: 2px solid #fd8769;
+    padding: 1rem;
+    border-radius: 20px;
+    color: black;
+}
+
+.registro,
+.formularioContacto,
+address {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem;
+    justify-items: center;
+    
+}
+
+.mainCatalogo {
+    grid-area: mainCatalogo;
+    justify-self: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fd8769;
+
+}
+
+.registro input, .registro select {
+    margin: 0.5rem;
+    padding: 0.3rem;
+}
+
+.contacto {
+    margin: 2rem;
+    align-items: start;
+}
+.tFiltro{
+    align-self: center;
+    color: #fd8769;
+}
+.fCatalogo, .fotoMain {
+    width: 300px;
+    border: 0.2rem solid #fd8769;
+    border-radius: 1rem;
+}
+
+.fotoMain:hover {
+    width: 400px;
+}
+
+.principal {  
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.titulo {
+    font-size: 3rem;
+}
+
+.titulo, .subtitulo {
+    padding: 0 0 2rem 1rem;
+    color: #fd8769;
+    align-self: center;
+}
+
+.introduccion {
+    padding: 0 1rem;
+}
+
+.frenteLocal {
+    border: 5px solid #fd8769;
+    border-radius: 3px;
+    margin: 2rem;
+}
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mainCatalogo mainCatalogo mainCatalogo"
+      "img1 img2 img3"
+  }
+
+.img1 { 
+    grid-area: img1;
+ }
+  
+.img2 { 
+    grid-area: img2; 
+}
+  
+.img3 {
+    grid-area: img3; 
+}
+
+.linkCatalogo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 5rem;
+}
+
+i{
+    padding: 1rem;
+    color: #fd8769;
+}
+
+.enviar {
+    background-color: #fd8769;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+address,
+.formularioContacto {
+    border: 0.4rem solid #fd8769;
+    border-radius: 1rem;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr;
+    grid-template-areas: 
+    "tCatalogo tCatalogo"
+    "filtro catalogo"
+    "filtro catalogo";
+    margin-bottom: 0.5rem;
+}
+
+.tCatalogo{
+    grid-area: tCatalogo;
+    justify-self: center;
+    color: #fd8769;
+    text-decoration: underline;
+}
+
+.filtro{
+    padding: 0.5rem;
+    margin: 5px;
+    border: 2px solid #fd8769;
+    border-radius: 1rem;
+    grid-area: filtro;
+    display: flex;
+    flex-direction: column;
+}
+.formFiltro{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.formFiltro input, .formFiltro select {
+    margin: 5px;
+    padding: 5px;
+}
+
+.catalogo {
+    grid-area: catalogo;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    gap: 5px;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6"
+    "numPaginas numPaginas numPaginas";
+}
+.numPaginas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: numPaginas;
+}
+
+.numPaginas li {
+    border: 1px solid #fd8769;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.img4{
+    grid-area: img4;
+}
+.img5{
+    grid-area: img5;
+}
+.img6{
+    grid-area: img6;
+}
+:is(.img1, .img2, .img3, .img4, .img5, .img6) img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+:is(.img1, .img2, .img3, .img4, .img5, .img6) img:hover {
+    z-index: -2;
+    opacity: 10%;
+}
+:is(.img1, .img2, .img3, .img4, .img5, .img6) p {
+    z-index: -1;
+    padding: 10px 0 0 10px;
+    position: absolute;
+    width: 300px;
+}
