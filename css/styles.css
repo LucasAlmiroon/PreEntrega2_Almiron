@@ -8,7 +8,7 @@ header {
     position: sticky;
     top: 0;
     border-bottom: 2px #fd8769 solid;
-    background-color: lightyellow;
+    background-color: lightgrey;
 }
 header a {
     margin-left: 1rem;
@@ -361,4 +361,13 @@ iframe {
     .mapa p {
         margin: 1rem;
     }
+    
+    .contacto {
+        margin: 0;
+    }
+    .formulariocontacto {
+        border: 0px;
+        padding: 0.2rem;
+        margin: 0;
+    
 }
