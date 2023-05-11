@@ -295,7 +295,7 @@ iframe {
 
 /* Adaptando a mobile */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     main section {
         flex-direction: column;
     }
