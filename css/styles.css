@@ -7,12 +7,14 @@
 header {
     position: sticky;
     top: 0;
-    border-bottom: 2px #fd8769 solid;
+    border-bottom: 2px #bd4e93 solid;
     background-color: lightgrey;
 }
+
 header a {
     margin-left: 1rem;
 }
+
 header,
 section,
 footer {
@@ -23,17 +25,17 @@ footer {
 
 a, div a {
     text-decoration: none;
-    color: #fd8769;
     padding-right: 1rem;
 }
 
 .frenteLocal {
-    width: 500px;
+    max-width: 500px;
 }
+
 input,
 select{
     border-radius: 0.3rem;
-    border-color: #fd8769;
+    border-color: #bd4e93;
 }
 
 nav,
@@ -44,9 +46,11 @@ a,
 p,
 label,
 span,
-select {
+select,
+.mainCatalogo,
+nav a {
     font-family: 'Sriracha', cursive;
-    color:rgb(253, 135, 105);
+    color:#bd4e93;
 }
 
 ul {
@@ -64,13 +68,13 @@ li {
     padding: 2rem;
 }
 .activa {
-    text-decoration:underline #fd8769 0.2rem;
+    text-decoration:underline #bd4e93 0.2rem;
 }
 .botonRegistro{
     align-self: flex-end;
 }
 .botonNav :hover {
-    border: 2px solid #fd8769;
+    border: 2px solid #bd4e93;
     padding: 1rem;
     border-radius: 20px;
     color: black;
@@ -92,8 +96,6 @@ address {
     justify-self: center;
     align-items: center;
     font-size: 1.5rem;
-    color: #fd8769;
-
 }
 
 .registro input, .registro select {
@@ -107,11 +109,11 @@ address {
 }
 .tFiltro{
     align-self: center;
-    color: #fd8769;
+    color: #bd4e93;
 }
 .fCatalogo, .fotoMain {
     width: 300px;
-    border: 0.2rem solid #fd8769;
+    border: 0.2rem solid #bd4e93;
     border-radius: 1rem;
 }
 
@@ -131,8 +133,9 @@ address {
 
 .titulo, .subtitulo {
     padding: 0 0 2rem 1rem;
-    color: #fd8769;
+    color: #bd4e93;
     align-self: center;
+    text-align: center;
 }
 
 .introduccion {
@@ -140,10 +143,16 @@ address {
 }
 
 .frenteLocal {
-    border: 5px solid #fd8769;
-    border-radius: 3px;
+    border: 0.5rem solid #bd4e93;
+    border-radius: 2rem;
     margin: 2rem;
 }
+
+.carrusel {
+    z-index: -1;
+    width: 50%;
+}
+
 .container {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -186,11 +195,11 @@ address {
 
 i{
     padding: 1rem;
-    color: #fd8769;
+    color: #bd4e93;
 }
 
 .enviar {
-    background-color: #fd8769;
+    background-color: #bd4e93;
     font-family: 'Roboto Mono', monospace;
     border-radius: 5px;
     margin-top: 1rem;
@@ -199,7 +208,7 @@ i{
 
 address,
 .formularioContacto {
-    border: 0.4rem solid #fd8769;
+    border: 0.4rem solid #bd4e93;
     border-radius: 1rem;
 }
 
@@ -217,14 +226,14 @@ address,
 .tCatalogo{
     grid-area: tCatalogo;
     justify-self: center;
-    color: #fd8769;
+    color: #bd4e93;
     text-decoration: underline;
 }
 
 .filtro{
     padding: 0.5rem;
     margin: 5px;
-    border: 2px solid #fd8769;
+    border: 2px solid #bd4e93;
     border-radius: 1rem;
     grid-area: filtro;
     display: flex;
@@ -259,7 +268,7 @@ address,
 }
 
 .numPaginas li {
-    border: 1px solid #fd8769;
+    border: 1px solid #bd4e93;
     border-radius: 1rem;
     padding: 1rem;
 }
@@ -292,7 +301,9 @@ iframe {
     width: 25rem;
     height: 25rem;
 }
-
+footer {
+    margin: 0 1rem;
+}
 /* Adaptando a mobile */
 
 @media screen and (max-width: 720px) {
@@ -301,6 +312,9 @@ iframe {
     }
     .frenteLocal {
         width: 300px;
+    }
+    .carrusel {
+        width: 100%;
     }
     .container {
         grid-template-columns: 1fr;
@@ -359,15 +373,20 @@ iframe {
     }
 
     .mapa p {
-        margin: 1rem;
+        margin: 0.5rem;
     }
     
+    .mapa p i {
+        max-width: 3rem;
+    }
     .contacto {
         margin: 0;
     }
+
     .formulariocontacto {
         border: 0px;
         padding: 0.2rem;
-        margin: 0;
+        margin: 0 auto;
     
+    }
 }
