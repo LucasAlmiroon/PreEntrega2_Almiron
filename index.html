@@ -5,49 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Enlaces a fuentes de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <!-- Enlace al favicon -->
     <link rel="shortcut icon" href="img/logo2.ico">
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/2f9e23067a.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <title>Délire Bags</title>
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Délire Bags | Home</title>
 </head>
 
 <body>
     <header>
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="100px"></a>
+        <!-- Logo y barra de navegación -->
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 botonera">
-                        <li class="nav-item botonNav activa">
-                            <a aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item botonNav">
-                            <a aria-current="page" href="pages/catalogo.html">Catálogo</a>
-                        </li>
-                        <li class="nav-item botonNav">
-                            <a aria-current="page" href="pages/contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item botonNav">
-                            <a aria-current="page" href="pages/ubicacion.html">Ubicación</a>
-                        </li>
-                        <li class="nav-item botonNav">
-                            <a aria-current="page" href="pages/registro.html">Registrarse</a>
-                        </li>
-                    </ul>
-                </div>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" class="logoNav"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 botonera">
+                    <!-- Elementos de la barra de navegación -->
+                    <li class="nav-item botonNav activa">
+                        <a aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item botonNav">
+                        <a aria-current="page" href="pages/catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item botonNav">
+                        <a aria-current="page" href="pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item botonNav">
+                        <a aria-current="page" href="pages/ubicacion.html">Ubicación</a>
+                    </li>
+                    <li class="nav-item botonNav">
+                        <a aria-current="page" href="pages/registro.html">Registrarse</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -55,6 +55,7 @@
     <main>
         <section>
             <div class="principal">
+                <!-- Título y subtítulo de la sección principal -->
                 <h1 class="titulo">Délire Bags</h1>
                 <h2 class="subtitulo">Valijas - Accesorios de viaje - Mochilas</h2>
                 <p class="introduccion">Con sus puertas abiertas desde el 2014. Delire es tu local de confianza a la
@@ -69,15 +70,16 @@
             </div>
             <div id="carouselExampleInterval" class="carousel slide carrusel" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="img/frente_local.jpg" class="frenteLocal" alt="...">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <img src="img/interior.jpg" class="frenteLocal" alt="...">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <img src="img/interior2.jpg" class="frenteLocal" alt="...">
-                  </div>
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="img/frente_local.jpg" class="frenteLocal" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/interior.jpg" class="frenteLocal" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/interior2.jpg" class="frenteLocal" alt="...">
+                    </div>
                 </div>
             </div>
 
@@ -88,18 +90,21 @@
                 <h3>Catálogo</h3>
             </div>
             <div>
+                <!-- Enlace al catálogo de valijas -->
                 <a href="pages/catalogo.html" class="linkCatalogo">
                     <img src="img/valija.png" alt="Valijas" class="fotoMain">
                     <span class="linkCatalogo">Valijas</span>
                 </a>
             </div>
             <div>
+                <!-- Enlace al catálogo de accesorios -->
                 <a href="pages/catalogo.html" class="linkCatalogo">
                     <img src="img/accesorio.jpg" alt="Valijas" class="fotoMain">
                     <span class="linkCatalogo">Accesorios</span>
                 </a>
             </div>
             <div>
+                <!-- Enlace al catálogo de mochilas -->
                 <a href="pages/catalogo.html" class="linkCatalogo">
                     <img src="img/mochila.png" alt="Valijas" class="fotoMain">
                     <span class="linkCatalogo">Mochilas</span>
@@ -111,9 +116,17 @@
     </main>
 
     <footer>
+        <!-- Información de derechos de autor y nombre del programador -->
         <span>© Delire Bags - All Rights Reserved </span>
         <span> Programador: Lucas Almirón</span>
     </footer>
+
+    <!-- Enlace al kit de iconos de Font Awesome -->
+    <script src="https://kit.fontawesome.com/2f9e23067a.js" crossorigin="anonymous"></script>
+    <!-- Enlace al archivo JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

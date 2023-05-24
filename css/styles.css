@@ -15,12 +15,15 @@ header a {
     margin-left: 1rem;
 }
 
-header,
 section,
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logoNav {
+    width: 100px;
 }
 
 a, div a {
@@ -315,7 +318,10 @@ footer {
     .frenteLocal {
         width: 300px;
     }
-
+    .botonera {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
     .carrusel {
         width: 100%;
         text-align: center;
