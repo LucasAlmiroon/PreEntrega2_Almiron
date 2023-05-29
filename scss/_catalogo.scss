@@ -1,0 +1,139 @@
+.tFiltro{
+    align-self: center;
+    color: $color-principal;
+}
+
+.filtro{
+    padding: 0.5rem;
+    margin: 5px;
+    border: 2px solid $color-principal;
+    border-radius: 1rem;
+    grid-area: filtro;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 850px) {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+.formFiltro{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.formFiltro{
+    input, select {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+.fCatalogo {
+    width: 300px;
+    border: 0.2rem solid $color-principal;
+    border-radius: 1rem;
+}
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr;
+    grid-template-areas: 
+    "tCatalogo tCatalogo"
+    "filtro catalogo"
+    "filtro catalogo";
+    margin-bottom: 0.5rem; 
+    @media screen and (max-width: 850px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.tCatalogo{
+    grid-area: tCatalogo;
+    justify-self: center;
+    color: $color-principal;
+    text-decoration: underline;
+}
+
+.catalogo {
+    grid-area: catalogo;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    gap: 5px;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6"
+    "numPaginas numPaginas numPaginas";   
+    @media screen and (max-width: 850px) {     
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+        align-items: center;
+        justify-content: center;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6"
+        "numPaginas";
+        @for $i from 1 through 6 {
+            .img-#{$i}{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+div{
+    .img1, .img2, .img3, .img4, .img5, .img6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            z-index: -1;
+            padding: 10px 0 0 10px;
+            position: absolute;
+            width: 300px;
+        }
+        img:hover {
+            z-index: -2;
+            opacity: 10%;
+        }
+        
+    }
+}
+
+.numPaginas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: numPaginas;
+    li {
+        border: 1px solid $color-principal;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    @media screen and (max-width: 850px) {    
+        padding: 0;
+        justify-content: start;
+    }
+}
+
+.linkCatalogo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}

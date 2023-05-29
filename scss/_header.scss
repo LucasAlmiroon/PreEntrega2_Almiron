@@ -1,0 +1,79 @@
+header {
+    position: sticky;
+    top: 0;
+    border-bottom: 2px $color-principal solid;
+    background-color: #f2f2f2;
+    a {
+        margin-left: 1rem;
+    }
+}
+
+
+.logoNav {
+    width: 100px;
+    mix-blend-mode: darken;
+}
+
+nav {
+    a {
+        font-family: 'Sriracha', cursive;
+        color:$color-principal;
+    }
+}
+
+ul {
+    list-style: none;
+    li {
+        padding: 2rem;
+    }
+}
+
+.botonera {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 850px) {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+}
+
+.activa {
+    text-decoration:underline $color-principal 0.2rem;
+}
+
+.botonRegistro{
+    align-self: flex-end;
+}
+
+.botonNav :hover {
+    border: 2px solid $color-principal;
+    padding: 1rem;
+    border-radius: 20px;
+    color: black;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mainCatalogo mainCatalogo mainCatalogo"
+      "img1 img2 img3";
+    
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.25fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      grid-auto-flow: row;
+      grid-template-areas:
+          "mainCatalogo"
+          "img1"
+          "img2"
+          "img3";
+    }
+}

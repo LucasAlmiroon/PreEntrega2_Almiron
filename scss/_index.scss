@@ -1,0 +1,68 @@
+.mainCatalogo {
+    grid-area: mainCatalogo;
+    justify-self: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.principal {  
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.titulo {
+    font-size: 3rem;
+}
+
+.titulo, .subtitulo {
+    padding: 0 0 2rem 1rem;
+    color: $color-principal;
+    align-self: center;
+    text-align: center;
+}
+
+.introduccion {
+    padding: 0 1rem;
+    font-style: italic;
+}
+
+.frenteLocal {
+    border: 0.5rem solid $color-principal;
+    border-radius: 2rem;
+    margin: 2rem;
+    width: 500px;
+    @media screen and (max-width: 850px) {
+        width: 300px;
+    }
+}
+
+.carrusel {
+    z-index: -1;
+    width: 70%;    
+    @media screen and (max-width: 850px) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+main {
+    section{
+        @media screen and (max-width: 850px) {
+            flex-direction: column;
+        }
+    }
+}
+.fotoMain {
+    width: 400px;
+    border: 0.2rem solid $color-principal;
+    border-radius: 1rem;
+    transition: all 1s;
+    margin: 2rem;
+    img {
+        width: 300px;
+    }
+    &:hover {
+        transform: scale(1.1, 1.2);
+    }
+}
