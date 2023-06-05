@@ -20,7 +20,7 @@
     <!-- Enlace a la hoja de estilos personalizada -->
     <link rel="stylesheet" href="../css/styles.css">
 
-    <title>Délire Bags | Catálogo</title>
+    <title>Délire Bags | Catálogo | Valijas, Mochilas, Accesorios de viaje</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
         <nav class="navbar">
             <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="" class="logoNav"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,103 +57,58 @@
         </nav>
     </header>
 
-    <main>
-        <div class="contenedor">
-            <h1 class="tCatalogo">Catálogo</h1>
-            <div class="filtro">
-                <span class="tFiltro">Filtros</span>
-                <form action="" class="formFiltro">
-                    <!-- Formulario de filtros -->
-                    <select name="Categoria" id="">
-                        <!-- Selección de categoría -->
-                        <option value="categoria">Categoria</option>
-                        <option value="valija">Valija</option>
-                        <option value="accesorio">Accesorio</option>
-                        <option value="mochila">Mochila</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <select name="Marca" id="">
-                        <!-- Selección de marca -->
-                        <option value="Marca">Marca</option>
-                        <option value="Primicia">Primicia</option>
-                        <option value="Gremond">Gremond</option>
-                        <option value="Jansport">Jansport</option>
-                        <option value="Everlast">Everlast</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <input type="number" value="min" placeholder="Precio minimo">
-                    <input type="number" value="max" placeholder="Precio maximo">
-                </form>
-            </div>
-            <section class="catalogo">
-                <!-- Sección del catálogo -->
-                <div class="img1">
-                    <!-- Primer artículo -->
-                    <p> Categoria: Valija.<br>
-                        Descripción: 8 ruedas - Tela.<br>
-                        Marca: Travel Tech.<br>
-                        Precio: $99999
-                    </p>
-                    <img src="../img/valija.png" alt="Valijas" class="fCatalogo">
-                </div>
-                <div class="img2">
-                    <!-- Segundo artículo -->
-                    <p> Categoria: Accesorio.<br>
-                        Descripción: Film protector hasta 4 valijas.<br>
-                        Marca: Full Pack.<br>
-                        Precio: $99999
-                    </p>
-                    <img src="../img/accesorio.jpg" alt="Accesorios" class="fCatalogo">
-                </div>
-                <div class="img3">
-                    <!-- Tercer artículo -->
-                    <p> Categoria: Mochilas.<br>
-                        Descripción: Cordura - Portanotebook.<br>
-                        Marca: Primicia.<br>
-                        Precio: $99999
-                    </p>
-                    <img src="../img/mochila.png" alt="Mochilas" class="fCatalogo">
-                </div>
-                <div class="img4">
-                    <!-- Cuarto artículo -->
-                    <p> Categoria: Valija.<br>
-                        Descripción: 8 ruedas - ABS.<br>
-                        Marca: Discovery.<br>
-                        Precio: $99999
-                    </p>
-                    <img src="../img/valija2.jpg" alt="Valijas" class="fCatalogo">
-                </div>
-                <div class="img5">
-                    <!-- Quinto artículo -->
-                    <p> Categoria: Accesorio.<br>
-                        Descripción: Lunchera termica Paw Patrol.<br>
-                        Marca: Cresko.<br>
-                        Precio: $99999
-                    </p>
-                    <img src="../img/accesorio2.jpg" alt="Accesorios" class="fCatalogo">
-                </div>
-                <div class="img6">
-                    <!-- Sexto artículo -->
-                    <p> Categoria: Mochila.<br>
-                        Descripción: Lona - Portanotebook.<br>
-                        Marca: Alpine Skate.<br>
-                        Precio: $99999
-                    </p>
-                    <img src="../img/mochila2.jpg" alt="Mochilas" class="fCatalogo">
-                </div>
-                <ul class="numPaginas">
-                    <!-- Navegación de páginas -->
-                    <li>&#60</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>Ultima</li>
-                    <li>&#62</li>
-                </ul>
-            </section>
-        </div>
-        <hr>
+    <main class="contenedor">
+        <h1 class="tCatalogo">Catálogo</h1>
+        <section class="filtro">
+            <span class="tFiltro">Filtros</span>
+            <form action="" class="formFiltro">
+                <!-- Formulario de filtros -->
+                <select name="Categoria" id="">
+                    <!-- Selección de categoría -->
+                    <option value="categoria">Categoria</option>
+                    <option value="valija">Valija</option>
+                    <option value="accesorio">Accesorio</option>
+                    <option value="mochila">Mochila</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <select name="Marca" id="">
+                    <!-- Selección de marca -->
+                    <option value="Marca">Marca</option>
+                    <option value="Primicia">Primicia</option>
+                    <option value="Gremond">Gremond</option>
+                    <option value="Jansport">Jansport</option>
+                    <option value="Everlast">Everlast</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <input type="number" value="min" placeholder="Precio minimo">
+                <input type="number" value="max" placeholder="Precio maximo">
+            </form>
+        </section>
+        <section class="catalogo">
+            <!-- Sección del catálogo -->
+            <!-- Primer artículo -->
+            <img src="../img/valija.png" alt="Imagen de valija" class="img1 fCatalogo">
+            <!-- Segundo artículo -->
+            <img src="../img/accesorio.jpg" alt="Imagen de accesiorio" class="img2 fCatalogo">
+            <!-- Tercer artículo -->
+            <img src="../img/mochila.png" alt="Imagen de mochila" class="img3 fCatalogo">
+            <!-- Cuarto artículo -->
+            <img src="../img/valija2.jpg" alt="Imagen de valija" class="img4 fCatalogo">
+            <!-- Quinto artículo -->
+            <img src="../img/accesorio2.jpg" alt="Imagen de accesiorio" class="img5 fCatalogo">
+            <!-- Sexto artículo -->
+            <img src="../img/mochila2.jpg" alt="Imagen de mochila" class="img6 fCatalogo">
+            <ul class="numPaginas">
+                <!-- Navegación de páginas -->
+                <li>&#60</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>Ultima</li>
+                <li>&#62</li>
+            </ul>
+        </section>
     </main>
 
     <footer>

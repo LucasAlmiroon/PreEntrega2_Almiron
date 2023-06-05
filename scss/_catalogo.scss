@@ -1,8 +1,8 @@
+/*Seccion de filtro*/
 .tFiltro{
     align-self: center;
     color: $color-principal;
 }
-
 .filtro{
     padding: 0.5rem;
     margin: 5px;
@@ -11,6 +11,7 @@
     grid-area: filtro;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     @media screen and (max-width: 850px) {
         align-self: stretch;
         display: flex;
@@ -32,14 +33,20 @@
         padding: 5px;
     }
 }
+
+/* Seccion catalogo */
 .fCatalogo {
     width: 300px;
     border: 0.2rem solid $color-principal;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .contenedor{
+    /*Grid general para la seccion del catalogo*/
     display: grid;
     grid-template-columns: 0.25fr 1fr;
     grid-template-rows: 0.25fr 1fr 1fr;
@@ -49,6 +56,7 @@
     "filtro catalogo";
     margin-bottom: 0.5rem; 
     @media screen and (max-width: 850px) {
+        /*Responsive de la seccion del catalogo*/
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -64,6 +72,7 @@
 }
 
 .catalogo {
+    /*Grid especifico para la seccion de las imagenes del catalogo*/
     grid-area: catalogo;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -73,7 +82,8 @@
     "img1 img2 img3"
     "img4 img5 img6"
     "numPaginas numPaginas numPaginas";   
-    @media screen and (max-width: 850px) {     
+    @media screen and (max-width: 850px) {
+        /*Responsive de las imagenes del catalogo*/
         margin-left: 1rem;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
@@ -88,34 +98,11 @@
         "img5"
         "img6"
         "numPaginas";
-        @for $i from 1 through 6 {
-            .img-#{$i}{
-                display: flex;
-                justify-content: center;
-            }
-        }
-    }
-}
-div{
-    .img1, .img2, .img3, .img4, .img5, .img6 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p{
-            z-index: -1;
-            padding: 10px 0 0 10px;
-            position: absolute;
-            width: 300px;
-        }
-        img:hover {
-            z-index: -2;
-            opacity: 10%;
-        }
-        
     }
 }
 
 .numPaginas{
+    /*Estilo para la numeracion de las paginas*/
     display: flex;
     justify-content: center;
     align-items: center;

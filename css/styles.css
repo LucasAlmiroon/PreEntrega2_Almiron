@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Estilos para la pagina principal.*/
 .mainCatalogo {
   grid-area: mainCatalogo;
   justify-self: center;
@@ -5,7 +7,7 @@
   font-size: 1.5rem; }
 
 .principal {
-  display: flex;
+  display: grid;
   flex-direction: column;
   align-items: start; }
 
@@ -36,14 +38,16 @@
   width: 70%; }
   @media screen and (max-width: 850px) {
     .carrusel {
+      /*Responsive del carrusel del index con las imagenes del local*/
       width: 100%;
       text-align: center; } }
 
 .cta {
   background-color: #f2f2f2;
-  padding: 5rem;
+  padding: 3rem;
   border: 0.2rem solid #bd4e93;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  grid-area: "cta"; }
   .cta h3 {
     color: black; }
   .cta p {
@@ -70,6 +74,25 @@
   .fotoMain:hover {
     transform: scale(1.1, 1.2); }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-auto-flow: row;
+  grid-template-areas: "mainCatalogo mainCatalogo" "img1 cta" "img2 img3"; }
+  @media screen and (max-width: 850px) {
+    .container {
+      /*Responsive de la seccion catalogo del index*/
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.25fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      grid-auto-flow: row;
+      grid-template-areas: "mainCatalogo" "img1" "img2" "img3" "cta"; } }
+
+/*Estilos para el header, la barra de navegación.*/
 header {
   position: sticky;
   top: 0;
@@ -86,6 +109,7 @@ nav a {
   font-family: 'Sriracha', cursive;
   color: #bd4e93; }
 
+/*Elimando los estilos para las listas.*/
 ul {
   list-style: none; }
   ul li {
@@ -113,23 +137,7 @@ ul {
   border-radius: 20px;
   color: black; }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 1fr;
-  align-items: center;
-  justify-content: center;
-  grid-auto-flow: row;
-  grid-template-areas: "mainCatalogo mainCatalogo mainCatalogo" "img1 img2 img3"; }
-  @media screen and (max-width: 850px) {
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.25fr 1fr 1fr 1fr;
-      align-items: center;
-      justify-content: center;
-      grid-auto-flow: row;
-      grid-template-areas: "mainCatalogo" "img1" "img2" "img3"; } }
-
+/*Seccion de filtro*/
 .tFiltro {
   align-self: center;
   color: #bd4e93; }
@@ -141,7 +149,8 @@ ul {
   border-radius: 1rem;
   grid-area: filtro;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start; }
   @media screen and (max-width: 850px) {
     .filtro {
       align-self: stretch;
@@ -159,12 +168,17 @@ ul {
   margin: 5px;
   padding: 5px; }
 
+/* Seccion catalogo */
 .fCatalogo {
   width: 300px;
   border: 0.2rem solid #bd4e93;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .contenedor {
+  /*Grid general para la seccion del catalogo*/
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 0.25fr 1fr 1fr;
@@ -172,6 +186,7 @@ ul {
   margin-bottom: 0.5rem; }
   @media screen and (max-width: 850px) {
     .contenedor {
+      /*Responsive de la seccion del catalogo*/
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -184,6 +199,7 @@ ul {
   text-decoration: underline; }
 
 .catalogo {
+  /*Grid especifico para la seccion de las imagenes del catalogo*/
   grid-area: catalogo;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -192,46 +208,17 @@ ul {
   grid-template-areas: "img1 img2 img3" "img4 img5 img6" "numPaginas numPaginas numPaginas"; }
   @media screen and (max-width: 850px) {
     .catalogo {
+      /*Responsive de las imagenes del catalogo*/
       margin-left: 1rem;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
       align-items: center;
       justify-content: center;
       grid-auto-flow: row;
-      grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "numPaginas"; }
-      .catalogo .img-1 {
-        display: flex;
-        justify-content: center; }
-      .catalogo .img-2 {
-        display: flex;
-        justify-content: center; }
-      .catalogo .img-3 {
-        display: flex;
-        justify-content: center; }
-      .catalogo .img-4 {
-        display: flex;
-        justify-content: center; }
-      .catalogo .img-5 {
-        display: flex;
-        justify-content: center; }
-      .catalogo .img-6 {
-        display: flex;
-        justify-content: center; } }
-
-div .img1, div .img2, div .img3, div .img4, div .img5, div .img6 {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  div .img1 p, div .img2 p, div .img3 p, div .img4 p, div .img5 p, div .img6 p {
-    z-index: -1;
-    padding: 10px 0 0 10px;
-    position: absolute;
-    width: 300px; }
-  div .img1 img:hover, div .img2 img:hover, div .img3 img:hover, div .img4 img:hover, div .img5 img:hover, div .img6 img:hover {
-    z-index: -2;
-    opacity: 10%; }
+      grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "numPaginas"; } }
 
 .numPaginas {
+  /*Estilo para la numeracion de las paginas*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,6 +238,7 @@ div .img1, div .img2, div .img3, div .img4, div .img5, div .img6 {
   justify-content: center;
   margin-bottom: 0.5rem; }
 
+/* Estilos para los formularios en general, de registro y contacto.*/
 address,
 .formularioContacto {
   display: flex;
@@ -282,6 +270,7 @@ address,
     .contacto {
       margin: 0; } }
 
+/*Estilo para el boton submit Enviar*/
 .enviar {
   background-color: #bd4e93;
   font-family: 'Roboto Mono', monospace;
@@ -289,13 +278,32 @@ address,
   margin-top: 1rem;
   padding: 1rem; }
 
+/*Estilo para el footer*/
 footer {
-  margin: 0 1rem; }
+  margin: 0 1rem;
+  border-top: solid 1px gray; }
 
+.notFound {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; }
+  .notFound button {
+    width: 100%; }
+  .notFound img {
+    width: 50%; }
+
+/*Configuraciones generales que se aplican en todas las paginas.*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: content-box; }
+
+h1, h2 {
+  text-align: center;
+  text-decoration: underline;
+  color: #bd4e93; }
 
 section,
 footer {
@@ -342,3 +350,7 @@ iframe {
 i {
   padding: 1rem;
   color: #bd4e93; }
+
+.puntuacion {
+  display: flex;
+  flex-direction: row; }

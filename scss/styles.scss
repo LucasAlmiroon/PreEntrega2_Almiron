@@ -4,13 +4,18 @@
 @import "catalogo";
 @import "formularios";
 @import "footer";
-
+@import "not-found";
+/*Configuraciones generales que se aplican en todas las paginas.*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
-
+h1,h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: $color-principal;
+}
 section,
 footer {
     display: flex;
@@ -66,4 +71,9 @@ iframe {
 i{
     padding: 1rem;
     color: $color-principal;
+}
+
+.puntuacion {
+    display: flex;
+    flex-direction: row;
 }
