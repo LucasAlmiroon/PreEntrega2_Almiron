@@ -1,19 +1,5 @@
 /* Estilos para los formularios en general, de registro y contacto.*/
-address,
-.formularioContacto {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin: 1rem;
-    justify-items: center;
-    border: 0.4rem solid #bd4e93;
-    border-radius: 1rem;
-}
-.formularioContacto {
-    @media screen and (max-width: 850px){
-        width: 70%;
-    }
-}
+
 .registro{
     display: flex;
     flex-direction: column;
@@ -32,6 +18,21 @@ address,
     align-items: start;
     @media screen and (max-width: 850px) {
         margin: 0;
+    }
+    address,
+    .formularioContacto {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        margin: 1rem;
+        justify-items: center;
+        border: 0.4rem solid #bd4e93;
+        border-radius: 1rem;
+    }
+    .formularioContacto {
+        @media screen and (max-width: 850px){
+            width: 70%;
+        }
     }
 }
 /*Estilo para el boton submit Enviar*/

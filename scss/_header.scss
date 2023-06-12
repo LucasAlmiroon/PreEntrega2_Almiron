@@ -5,21 +5,38 @@ header {
     top: 0;
     border-bottom: 2px $color-principal solid;
     background-color: #f2f2f2;
-    a {
-        margin-left: 1rem;
-    }
-}
 
+    nav {
 
-.logoNav {
-    width: 100px;
-    mix-blend-mode: darken;
-}
+        .logoNav {
+            width: 100px;
+            mix-blend-mode: darken;
+        }
+        .botonera {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: 850px) {
+                flex-direction: column;
+                padding: 0.5rem;
+            }
+            .botonNav{
+                &:hover{
+                    border: 2px solid $color-principal;
+                    padding: 1rem;
+                    border-radius: 20px;
+                    color: black;
+                    a {        
+                        margin-left: 1rem;
+                    }
+                }
+            }
 
-nav {
-    a {
-        font-family: 'Sriracha', cursive;
-        color:$color-principal;
+            .activa {
+                text-decoration:underline $color-principal 0.2rem;
+            }
+        }
     }
 }
 /*Elimando los estilos para las listas.*/
@@ -30,28 +47,3 @@ ul {
     }
 }
 
-.botonera {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    @media screen and (max-width: 850px) {
-        flex-direction: column;
-        padding: 0.5rem;
-    }
-}
-
-.activa {
-    text-decoration:underline $color-principal 0.2rem;
-}
-
-.botonRegistro{
-    align-self: flex-end;
-}
-
-.botonNav :hover {
-    border: 2px solid $color-principal;
-    padding: 1rem;
-    border-radius: 20px;
-    color: black;
-}

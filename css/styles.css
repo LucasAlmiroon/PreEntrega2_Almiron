@@ -47,6 +47,7 @@
   padding: 3rem;
   border: 0.2rem solid #bd4e93;
   border-radius: 1rem;
+  margin: 1rem;
   grid-area: "cta"; }
   .cta h3 {
     color: black; }
@@ -71,10 +72,19 @@
   margin: 2rem; }
   .fotoMain img {
     width: 300px; }
+    @media screen and (max-width: 850px) {
+      .fotoMain img {
+        /*Responsive de la seccion catalogo del index*/
+        width: 200px; } }
   .fotoMain:hover {
     transform: scale(1.1, 1.2); }
+  @media screen and (max-width: 850px) {
+    .fotoMain {
+      /*Responsive de la seccion catalogo del index*/
+      margin: 0;
+      width: 300px; } }
 
-.container {
+.contenedorMainCatalogo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.25fr 1fr 1fr;
@@ -83,14 +93,10 @@
   grid-auto-flow: row;
   grid-template-areas: "mainCatalogo mainCatalogo" "img1 cta" "img2 img3"; }
   @media screen and (max-width: 850px) {
-    .container {
+    .contenedorMainCatalogo {
       /*Responsive de la seccion catalogo del index*/
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.25fr 1fr 1fr 1fr;
-      align-items: center;
-      justify-content: center;
-      grid-auto-flow: row;
-      grid-template-areas: "mainCatalogo" "img1" "img2" "img3" "cta"; } }
+      display: flex;
+      flex-direction: column; } }
 
 /*Estilos para el header, la barra de navegación.*/
 header {
@@ -98,16 +104,27 @@ header {
   top: 0;
   border-bottom: 2px #bd4e93 solid;
   background-color: #f2f2f2; }
-  header a {
-    margin-left: 1rem; }
-
-.logoNav {
-  width: 100px;
-  mix-blend-mode: darken; }
-
-nav a {
-  font-family: 'Sriracha', cursive;
-  color: #bd4e93; }
+  header nav .logoNav {
+    width: 100px;
+    mix-blend-mode: darken; }
+  header nav .botonera {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (max-width: 850px) {
+      header nav .botonera {
+        flex-direction: column;
+        padding: 0.5rem; } }
+    header nav .botonera .botonNav:hover {
+      border: 2px solid #bd4e93;
+      padding: 1rem;
+      border-radius: 20px;
+      color: black; }
+      header nav .botonera .botonNav:hover a {
+        margin-left: 1rem; }
+    header nav .botonera .activa {
+      text-decoration: underline #bd4e93 0.2rem; }
 
 /*Elimando los estilos para las listas.*/
 ul {
@@ -115,75 +132,15 @@ ul {
   ul li {
     padding: 2rem; }
 
-.botonera {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  @media screen and (max-width: 850px) {
-    .botonera {
-      flex-direction: column;
-      padding: 0.5rem; } }
-
-.activa {
-  text-decoration: underline #bd4e93 0.2rem; }
-
-.botonRegistro {
-  align-self: flex-end; }
-
-.botonNav :hover {
-  border: 2px solid #bd4e93;
-  padding: 1rem;
-  border-radius: 20px;
-  color: black; }
-
-/*Seccion de filtro*/
-.tFiltro {
-  align-self: center;
-  color: #bd4e93; }
-
-.filtro {
-  padding: 0.5rem;
-  margin: 5px;
-  border: 2px solid #bd4e93;
-  border-radius: 1rem;
-  grid-area: filtro;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-  @media screen and (max-width: 850px) {
-    .filtro {
-      align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch; } }
-
-.formFiltro {
-  display: flex;
-  flex-direction: column;
-  justify-items: center; }
-
-.formFiltro input, .formFiltro select {
-  margin: 5px;
-  padding: 5px; }
-
-/* Seccion catalogo */
-.fCatalogo {
-  width: 300px;
-  border: 0.2rem solid #bd4e93;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
 .contenedor {
   /*Grid general para la seccion del catalogo*/
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 0.25fr 1fr 1fr;
   grid-template-areas: "tCatalogo tCatalogo" "filtro catalogo" "filtro catalogo";
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  /*Seccion de filtro*/
+  /* Seccion catalogo */ }
   @media screen and (max-width: 850px) {
     .contenedor {
       /*Responsive de la seccion del catalogo*/
@@ -191,31 +148,57 @@ ul {
       flex-direction: column;
       justify-content: center;
       align-items: center; } }
-
-.tCatalogo {
-  grid-area: tCatalogo;
-  justify-self: center;
-  color: #bd4e93;
-  text-decoration: underline; }
-
-.catalogo {
-  /*Grid especifico para la seccion de las imagenes del catalogo*/
-  grid-area: catalogo;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.25fr;
-  gap: 5px;
-  grid-template-areas: "img1 img2 img3" "img4 img5 img6" "numPaginas numPaginas numPaginas"; }
-  @media screen and (max-width: 850px) {
-    .catalogo {
-      /*Responsive de las imagenes del catalogo*/
-      margin-left: 1rem;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
-      align-items: center;
+  .contenedor .filtro {
+    padding: 0.5rem;
+    margin: 5px;
+    border: 2px solid #bd4e93;
+    border-radius: 1rem;
+    grid-area: filtro;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    @media screen and (max-width: 850px) {
+      .contenedor .filtro {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch; } }
+    .contenedor .filtro .tFiltro {
+      align-self: center;
+      color: #bd4e93; }
+    .contenedor .filtro .formFiltro {
+      display: flex;
+      flex-direction: column;
+      justify-items: center; }
+      .contenedor .filtro .formFiltro input, .contenedor .filtro .formFiltro select {
+        margin: 5px;
+        padding: 5px; }
+  .contenedor .tCatalogo {
+    grid-area: tCatalogo;
+    justify-self: center;
+    color: #bd4e93;
+    text-decoration: underline; }
+  .contenedor .catalogo {
+    /*Grid especifico para la seccion de las imagenes del catalogo*/
+    grid-area: catalogo;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    gap: 5px;
+    grid-template-areas: "img1 img2 img3" "img4 img5 img6" "numPaginas numPaginas numPaginas"; }
+    @media screen and (max-width: 850px) {
+      .contenedor .catalogo {
+        /*Responsive de las imagenes del catalogo*/
+        display: flex;
+        flex-direction: column; } }
+    .contenedor .catalogo .fCatalogo {
+      width: 300px;
+      border: 0.2rem solid #bd4e93;
+      border-radius: 1rem;
+      display: flex;
       justify-content: center;
-      grid-auto-flow: row;
-      grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "numPaginas"; } }
+      align-items: center; }
 
 .numPaginas {
   /*Estilo para la numeracion de las paginas*/
@@ -239,20 +222,6 @@ ul {
   margin-bottom: 0.5rem; }
 
 /* Estilos para los formularios en general, de registro y contacto.*/
-address,
-.formularioContacto {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  margin: 1rem;
-  justify-items: center;
-  border: 0.4rem solid #bd4e93;
-  border-radius: 1rem; }
-
-@media screen and (max-width: 850px) {
-  .formularioContacto {
-    width: 70%; } }
-
 .registro {
   display: flex;
   flex-direction: column;
@@ -269,6 +238,18 @@ address,
   @media screen and (max-width: 850px) {
     .contacto {
       margin: 0; } }
+  .contacto address,
+  .contacto .formularioContacto {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem;
+    justify-items: center;
+    border: 0.4rem solid #bd4e93;
+    border-radius: 1rem; }
+  @media screen and (max-width: 850px) {
+    .contacto .formularioContacto {
+      width: 70%; } }
 
 /*Estilo para el boton submit Enviar*/
 .enviar {
@@ -330,6 +311,10 @@ select,
 iframe {
   width: 25rem;
   height: 25rem; }
+  @media screen and (max-width: 850px) {
+    iframe {
+      width: 100%;
+      height: 100%; } }
 
 .mapa {
   display: flex;
@@ -354,3 +339,10 @@ i {
 .puntuacion {
   display: flex;
   flex-direction: row; }
+  @media screen and (max-width: 850px) {
+    .puntuacion {
+      padding: 0;
+      margin: 0; }
+      .puntuacion li {
+        padding: 0;
+        font-size: 0.8rem; } }
