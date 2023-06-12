@@ -80,31 +80,21 @@
             align-items: center;
         }
     }
-
-}
-
-
-
-.numPaginas{
-    /*Estilo para la numeracion de las paginas*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: numPaginas;
-    li {
-        border: 1px solid $color-principal;
-        border-radius: 1rem;
-        padding: 1rem;
+    .numPaginas{
+        /*Estilo para la numeracion de las paginas*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: numPaginas;
+        li {
+            border: 1px solid $color-principal;
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+        @media screen and (max-width: 850px) {    
+            padding: 0;
+            justify-content: start;
+        }
     }
-    @media screen and (max-width: 850px) {    
-        padding: 0;
-        justify-content: start;
-    }
-}
 
-.linkCatalogo {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
 }

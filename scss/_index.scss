@@ -1,33 +1,4 @@
 /*Estilos para la pagina principal.*/
-.mainCatalogo {
-    grid-area: mainCatalogo;
-    justify-self: center;
-    align-items: center;
-    font-size: 1.5rem;
-}
-
-.principal {  
-    display: grid;
-    flex-direction: column;
-    align-items: start;
-}
-
-.titulo {
-    font-size: 3rem;
-}
-
-.titulo, .subtitulo {
-    padding: 0 0 2rem 1rem;
-    color: $color-principal;
-    align-self: center;
-    text-align: center;
-}
-
-.introduccion {
-    padding: 0 1rem;
-    font-style: italic;
-}
-
 .frenteLocal {
     border: 0.5rem solid $color-principal;
     border-radius: 2rem;
@@ -47,35 +18,34 @@
         text-align: center;
     }
 }
-.cta {
-    background-color: #f2f2f2;
-    padding: 3rem;
-    border: 0.2rem solid $color-principal;
-    border-radius: 1rem;
-    margin: 1rem;
-    grid-area: "cta";
-    h3 {
-        color: black;
-    }
-    p {
-        font-style: italic;
-        color: black;
-    }
-    button {
-        margin: 1rem;
-        padding: 0.5rem;
-        font-size: 1.5rem;
-        text-align: center;
-    };
-}
 
 main {
     section{
+        .principal {  
+            display: grid;
+            flex-direction: column;
+            align-items: start;
+            .titulo {
+                font-size: 3rem;
+            }
+            .titulo, .subtitulo {
+                padding: 0 0 2rem 1rem;
+                color: $color-principal;
+                align-self: center;
+                text-align: center;
+            }
+        
+            .introduccion {
+                padding: 0 1rem;
+                font-style: italic;
+            }
+        }
         @media screen and (max-width: 850px) {
             flex-direction: column;
         }
     }
 }
+
 .fotoMain {
     width: 400px;
     border: 0.2rem solid $color-principal;
@@ -98,6 +68,7 @@ main {
       width: 300px;
     }
 }
+
 .contenedorMainCatalogo {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -109,7 +80,39 @@ main {
       "mainCatalogo mainCatalogo"
       "img1 cta"
       "img2 img3";
-    
+    .mainCatalogo {
+        grid-area: mainCatalogo;
+        justify-self: center;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .linkCatalogo {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    .cta {
+        background-color: #f2f2f2;
+        padding: 3rem;
+        border: 0.2rem solid $color-principal;
+        border-radius: 1rem;
+        margin: 1rem;
+        grid-area: "cta";
+        h3 {
+            color: black;
+        }
+        p {
+            font-style: italic;
+            color: black;
+        }
+        button {
+            margin: 1rem;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+        };
+    }
     @media screen and (max-width: 850px) {
         /*Responsive de la seccion catalogo del index*/
       display: flex;
